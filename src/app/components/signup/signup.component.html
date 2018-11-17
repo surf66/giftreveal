@@ -1,0 +1,61 @@
+<mat-card>
+  <mat-card-title>
+    Signup
+  </mat-card-title>
+
+  <mat-card-content>
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <table>
+        <tr>
+          <td>
+            <mat-form-field>
+              <input formControlName="name" matInput placeholder="Name">
+            </mat-form-field>
+            <div *ngIf="submitted && f.name.errors" class="invalid-feedback" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+              <div *ngIf="f.name.errors.required">Your name is required</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field>
+              <input formControlName="username" matInput placeholder="Username">
+            </mat-form-field>
+            <div *ngIf="submitted && f.name.errors" class="invalid-feedback" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+              <div *ngIf="f.name.errors.required">Your name is required</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <mat-form-field>
+              <input formControlName="email" matInput placeholder="Email">
+            </mat-form-field>
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+              <div *ngIf="f.email.errors.required">Email is required</div>
+              <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <mat-form-field>
+              <input formControlName="password" type="password" matInput placeholder="password">
+            </mat-form-field>
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+              <div *ngIf="f.password.errors.required">Password is required</div>
+              <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <div class="form-group">
+              <button [disabled]="loading"  mat-raised-button color="accent">Signup</button>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </mat-card-content>
+</mat-card>
