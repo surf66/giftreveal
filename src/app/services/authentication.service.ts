@@ -22,8 +22,7 @@ export class AuthenticationService {
       .then((res) => {
         this.setSession(res);
         this.router.navigate(['/dashboard']);
-      })
-      .catch(() => { console.log('error'); });
+      });
   }
 
   private setSession(authResult) {

@@ -11,6 +11,7 @@ import { AuthenticationService } from '../../services/authentication.service';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   submitted = false;
+  loginError = false;
   user: User;
 
   constructor(private formBuilder: FormBuilder, private authenticationService: AuthenticationService) {
@@ -38,7 +39,10 @@ export class LoginComponent implements OnInit {
       '',
       this.loginForm.value.password
     );
-    this.authenticationService.login(this.user);
+    this.authenticationService.login(this.user)
+      .catch(() => {
+        this.loginError = true;
+      });
   }
 
 }

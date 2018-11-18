@@ -1,0 +1,5 @@
+@each $colour-name, $colour in $colour-map {
+  .bg-#{$colour-name} {
+    background-color: #{$colour};
+  }
+}

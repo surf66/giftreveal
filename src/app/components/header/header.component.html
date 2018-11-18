@@ -1,0 +1,9 @@
+<header>
+  <div class="container">
+    <nav class="nav-bar">
+      <a *ngIf="!isLoggedIn" href="/signup" mat-button color="primary">Sign up</a>
+      <a *ngIf="!isLoggedIn" href="/login" mat-button color="primary">Login</a>
+      <a *ngIf="isLoggedIn" href="/account" mat-button color="primary">Account</a>
+    </nav>
+  </div>
+</header>
