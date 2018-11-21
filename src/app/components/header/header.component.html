@@ -1,9 +1,9 @@
-<header>
+<!-- <header>
   <div class="container">
-    <nav class="nav-bar">
-      <a *ngIf="!isLoggedIn" href="/signup" mat-button color="primary">Sign up</a>
-      <a *ngIf="!isLoggedIn" href="/login" mat-button color="primary">Login</a>
-      <a *ngIf="isLoggedIn" href="/account" mat-button color="primary">Account</a>
-    </nav>
+    <a *ngIf="!isLoggedIn" href="/account/signup" class="waves-effect waves-light btn">Sign up</a>
+    <a *ngIf="!isLoggedIn" href="/account/login" class="waves-effect waves-light btn">Login</a>
+    <a *ngIf="isLoggedIn" href="/account" class="waves-effect waves-light btn">Account</a>
   </div>
-</header>
+</header> -->
+
+<mat-toolbar *ngIf="isLoggedIn">Gift Reveal</mat-toolbar>

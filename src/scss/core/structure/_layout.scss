@@ -1,6 +1,5 @@
 body {
-  background: $whitesmoke;
-  padding-top: 4rem;
+  background: $light-grey;
 }
 
 section, footer {
@@ -21,8 +20,8 @@ img {
     padding: 0 2rem;
   }
 
-  @media screen and (min-width: $xx-large) {
-    max-width: $xx-large;
+  @media screen and (min-width: $large) {
+    max-width: $large;
   }
 }
 

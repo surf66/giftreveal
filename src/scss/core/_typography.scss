@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Raleway', Helvetica, Arial,  sans-serif;
+  font-weight: 400;
+  line-height: 1.65rem;
+  color: $dark-grey;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: rem(35);
+  line-height: rem(35);
+}
+
+h2 {
+  font-size: rem(25);
+  line-height: rem(25);
+}
+
+h3 {
+  font-size: rem(20);
+  line-height: rem(20);
+}
+
+h4 {
+  font-size: rem(18);
+  line-height: rem(18);
+}
+
+a {
+  color: $purple;
+  text-decoration: none;
+
+  &:hover {
+    color: $purple;
+  }
+}
+
+p {
+  font-size: 1rem;
+}

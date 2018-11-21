@@ -13,28 +13,4 @@ header {
     align-items: center;
     width: 100%;
   }
-
-  .container a {
-    background: $primary;
-  }
-
-  .container > a span {
-    color: $whitesmoke;
-  }
-
-  .nav-bar {
-    flex: 0;
-    flex-grow: 1;
-    text-align: right;
-
-    a {
-      &:first-of-type {
-        margin-right: 1rem;
-      }
-      
-      span {
-        color: $whitesmoke;
-      }
-    }
-  }
 }

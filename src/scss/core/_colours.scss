@@ -1,27 +1,32 @@
 $colour-map: (
-  primary: #866CE2,
-  secondary: #DDDAEF,
-  tertiary: #F6DBC5,
-  whitesmoke: #F5F4F7,
+  gift-reveal-purple: #965BF1,
+  purple: #363A9D,
+  dark-blue: #363A9D,
+  medium-blue: #788BE8,
+  light-blue: #AEC5CF,
+  dark-grey: #737488,
+  medium-grey: #D5D3DB,
+  light-grey: #FCFCFC,
   black: #000000,
   white: #ffffff,
-  dark-grey: #959595,
-  medium-grey: #dddddd,
-  light-grey: #f1f1f1,
   error: #c30000,
   warning: #e78200,
   success: #00e785
 ) !default;
 
-$primary: map-get($colour-map, primary);
-$secondary: map-get($colour-map, secondary);
-$tertiary: map-get($colour-map, tertiary);
-$whitesmoke: map-get($colour-map, whitesmoke);
-$black: map-get($colour-map, black);
-$white: map-get($colour-map, white);
+// Brand
+$gift-reveal-purple: map-get($colour-map, gift-reveal-purple);
+$purple: map-get($colour-map, purple);
+$dark-blue: map-get($colour-map, dark-blue);
+$medium-blue: map-get($colour-map, medium-blue);
+$light-blue: map-get($colour-map, light-blue);
 $dark-grey: map-get($colour-map, dark-grey);
 $medium-grey: map-get($colour-map, medium-grey);
 $light-grey: map-get($colour-map, light-grey);
+
+// Utility
+$black: map-get($colour-map, black);
+$white: map-get($colour-map, white);
 $error: map-get($colour-map, error);
 $warning: map-get($colour-map, warning);
 $success: map-get($colour-map, success);

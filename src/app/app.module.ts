@@ -14,24 +14,26 @@ import { MatButtonModule,
   MatRadioModule,
   MatSelectModule,
   MatOptionModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
   MatSlideToggleModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HeaderComponent } from './components/header/header.component';
+import { MaterializeComponent } from './components/materialize/materialize.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     SignupComponent,
     LoginComponent,
     DashboardComponent,
-    HeaderComponent
+    HeaderComponent,
+    MaterializeComponent
   ],
   imports: [
     BrowserModule,
@@ -50,9 +52,11 @@ import { HeaderComponent } from './components/header/header.component';
     MatRadioModule,
     MatSelectModule,
     MatOptionModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     MatSlideToggleModule
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, MatDatepickerModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
