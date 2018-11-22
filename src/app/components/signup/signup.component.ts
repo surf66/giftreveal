@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from '../../models/user.model';
 import { AuthenticationService } from '../../services/authentication.service';
@@ -13,7 +14,7 @@ export class SignupComponent implements OnInit {
   submitted = false;
   user: User;
 
-  constructor(private formBuilder: FormBuilder, private authenticationService: AuthenticationService) {
+  constructor(private formBuilder: FormBuilder, private router: Router, private authenticationService: AuthenticationService) {
     this.signupForm = this.formBuilder.group({
       name: ['', Validators.required],
       username: ['', Validators.required],
@@ -23,7 +24,9 @@ export class SignupComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    if(this.authenticationService.isAuthenticated()) {
+      this.router.navigate(['dashboard']);
+    }
   }
 
   get f() { return this.signupForm.controls; }

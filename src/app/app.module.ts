@@ -24,7 +24,6 @@ import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HeaderComponent } from './components/header/header.component';
-import { MaterializeComponent } from './components/materialize/materialize.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +31,7 @@ import { MaterializeComponent } from './components/materialize/materialize.compo
     SignupComponent,
     LoginComponent,
     DashboardComponent,
-    HeaderComponent,
-    MaterializeComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

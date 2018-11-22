@@ -14,3 +14,19 @@ header {
     width: 100%;
   }
 }
+
+.dashboard-header {
+  color: $light-grey;
+  background: $gift-reveal-purple;
+}
+
+.mat-toolbar {
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
+.cdk-overlay-container {
+  z-index: 9999;
+}

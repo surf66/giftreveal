@@ -1,9 +1,14 @@
-<!-- <header>
-  <div class="container">
-    <a *ngIf="!isLoggedIn" href="/account/signup" class="waves-effect waves-light btn">Sign up</a>
-    <a *ngIf="!isLoggedIn" href="/account/login" class="waves-effect waves-light btn">Login</a>
-    <a *ngIf="isLoggedIn" href="/account" class="waves-effect waves-light btn">Account</a>
+<mat-toolbar *ngIf="isLoggedIn$ | async" class="mat-elevation-z4" color="primary">
+  <img src="/assets/gr-logo-white.svg" alt="Gift Reveal" />
+  <div>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" [overlapTrigger]="false">
+      <button mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon>
+        <span (click)="logout()">Logout</span>
+      </button>
+    </mat-menu>
   </div>
-</header> -->
-
-<mat-toolbar *ngIf="isLoggedIn">Gift Reveal</mat-toolbar>
+</mat-toolbar>
